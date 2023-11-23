@@ -1,4 +1,4 @@
-import * as cuid from "cuid";
+import * as cuid from 'cuid';
 
 export interface BasketItem {
     id: number;
@@ -8,20 +8,25 @@ export interface BasketItem {
     pictureUrl: string;
     brand: string;
     type: string;
-  }
-  
-  export interface Basket {
+}
+
+export interface Basket {
     id: string;
     items: BasketItem[];
-  }
+    clientSecret?: string;
+    paymentIntentId?: string;
+    deliveryMethodId?: number;
+    shippingPrice: number;
+}
 
-  export class Basket implements Basket {
+export class Basket implements Basket {
     id = cuid();
     items: BasketItem[] = [];
-  }
+    shippingPrice = 0;
+}
 
-  export interface BasketTotals {
+export interface BasketTotals {
     shipping: number;
     subtotal: number;
     total: number;
-  }
+}

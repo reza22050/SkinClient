@@ -11,8 +11,6 @@ import { BreadcrumbModule } from 'xng-breadcrumb';
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { SharedModule } from '../shared/shared.module';
 
-
-
 @NgModule({
   declarations: [
     NavBarComponent,
@@ -22,19 +20,19 @@ import { SharedModule } from '../shared/shared.module';
     SectionHeaderComponent
   ],
   imports: [
-    CommonModule, 
-    RouterModule, 
+    CommonModule,
+    RouterModule,
     ToastrModule.forRoot({
-      positionClass: 'toast-bottom-right', 
+      positionClass: 'toast-bottom-right',
       preventDuplicates: true
     }),
-    BreadcrumbModule, 
-    NgxSpinnerModule, 
+    BreadcrumbModule,
+    NgxSpinnerModule,
     SharedModule
-  ], 
-  exports:[
-    NavBarComponent, 
-    SectionHeaderComponent, 
+  ],
+  exports: [
+    NavBarComponent,
+    SectionHeaderComponent,
     NgxSpinnerModule
   ]
 })

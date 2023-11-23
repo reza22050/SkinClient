@@ -21,7 +21,8 @@ export class TextInputComponent implements ControlValueAccessor {
   registerOnTouched(fn: any): void {
   }
 
-  get control(): FormControl{
-    return this.controlDir.control as FormControl;
+  get control(): FormControl {
+    return this.controlDir.control as FormControl
   }
+
 }

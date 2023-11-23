@@ -20,7 +20,7 @@
             "allowedCommonJsDependencies": [
               "cuid"
             ],
-            "outputPath": "dist/client",
+            "outputPath": "../API/wwwroot",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -38,7 +38,7 @@
               "node_modules/bootswatch/dist/united/bootstrap.min.css",
               "node_modules/font-awesome/css/font-awesome.min.css",
               "node_modules/ngx-spinner/animations/timer.css",
-              "node_modules/ngx-toastr/toastr.css" ,
+              "node_modules/ngx-toastr/toastr.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -48,9 +48,16 @@
               "fileReplacements": [
                 {
                   "replace": "src/environments/environment.ts",
-                  "with": "src/environments/environment.development.ts"
+                  "with": "src/environments/environment.prod.ts"
                 }
               ],
+              "optimization": {
+                "scripts": true,
+                "styles": {
+                  "minify": true,
+                  "inlineCritical": false
+                }
+              },
               "budgets": [
                 {
                   "type": "initial",
@@ -80,7 +87,7 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
             "sslCert": "ssl/localhost.pem",
-            "sslKey": "ssl/localhost-key.pem", 
+            "sslKey": "ssl/localhost-key.pem",
             "ssl": true
           },
           "configurations": {

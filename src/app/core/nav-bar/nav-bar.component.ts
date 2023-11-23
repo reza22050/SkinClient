@@ -10,10 +10,10 @@ import { BasketItem } from 'src/app/shared/models/basket';
 })
 export class NavBarComponent {
 
-  constructor(public basketService: BasketService, public accountService: AccountService) {
+  constructor(public basketService: BasketService, public accountService: AccountService) {}
+
+  getCount(items: BasketItem[]) {
+    return items.reduce((sum, item) => sum + item.quantity, 0);
   }
 
-  getCount(items: BasketItem[]){
-    return items.reduce((sum, item)=> sum+item.quantity, 0);
-  }
 }

@@ -21,8 +21,8 @@ import { CheckoutSuccessComponent } from './checkout-success/checkout-success.co
     CheckoutSuccessComponent
   ],
   imports: [
-    CommonModule, 
-    CheckoutRoutingModule, 
+    CommonModule,
+    CheckoutRoutingModule,
     SharedModule
   ]
 })
